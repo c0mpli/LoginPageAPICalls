@@ -40,6 +40,11 @@ mongoose
     console.log("Error connecting to database", err);
   });
 
+app.get('/', (req, res) => {
+  res.send('TodoJS Backend - Jash Doshi!');
+})
+
+
 app.post("/register", async (req, res) => {
   const { email, password } = req.body;
   if (!password || !email)
